@@ -1,0 +1,31 @@
+
+<script>
+let index= 0; //start point
+let images= [];
+let time = 1000;
+
+//Image list
+    images[0] = 'image1.jpg';
+	images[1] = 'image2.jpg';
+	images[2] = 'image3.jpg';
+	images[3] = 'image4.jpg';
+
+// Change Image
+
+ const changeImg = ()=> {
+     document.slide.src = images[index];
+
+     if(index < images.length - 1) {
+       index++;
+     } else {
+       index = 0;
+     }
+
+     setTimeout("changeImg()" , time);
+ }
+
+ window.onload = changeImg;
+
+</script>
+
+<img name="slide" width="400" height="200">
